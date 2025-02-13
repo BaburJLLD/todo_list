@@ -1,1 +1,101 @@
-/*# sourceMappingURL=main.css.map */
+* {
+  margin: 0em;
+  padding: 0em;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.top {
+  justify-content: center;
+  padding: 15px;
+  background-color: #630909;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+input {
+  width: 85%;
+  height: 35px;
+  padding: 10px 5px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+#add {
+  width: 11%;
+  height: 35px;
+  background-color: aquamarine;
+  border-radius: 5px;
+  color: black;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+#list {
+  width: 100%;
+  border: 0px 10px;
+  border-style: solid;
+  border-color: #968585;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 5px 15px;
+  min-height: 35 px;
+  background-color: #ffffff;
+  border-bottom: 3px solid #ccc;
+  color: grey;
+  font-size: 15px;
+  line-height: 40px;
+}
+
+button {
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+}
+
+#tasklist button,
+#done button {
+  color: red;
+  float: right;
+  border: none;
+  background-color: white;
+}
+
+.complete {
+  border-radius: 15px;
+  background-image: url("https://res.cloudinary.com/sbullkoft/image/upload/v1481411910/tick-128_v5o7dv.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.delete {
+  background-image: url("https://res.cloudinary.com/sbullkoft/image/upload/v1481411917/delete-128_wxp3a5.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#done {
+  text-decoration: line-through;
+}
+
+#bottom {
+  height: 50px;
+  background-color: #630909;
+  width: 100%;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}/*# sourceMappingURL=main.css.map */
