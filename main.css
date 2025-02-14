@@ -38,6 +38,10 @@ input {
   cursor: pointer;
 }
 
+#add:hover {
+  background-color: #76e0c1;
+}
+
 #list {
   width: 100%;
   border: 0px 10px;
@@ -72,6 +76,10 @@ button {
   float: right;
 }
 
+.buttons button:hover {
+  opacity: 0.8;
+}
+
 .buttons button {
   float: right;
   border: none;
@@ -96,7 +104,7 @@ button {
   text-decoration: line-through;
 }
 
-#done .button.complete {
+#done button.complete {
   background-color: green;
 }
 

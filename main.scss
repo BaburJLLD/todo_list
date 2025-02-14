@@ -36,6 +36,9 @@ input{
     font-size: 15px ;
     cursor: pointer;
 }
+#add:hover {
+    background-color: #76e0c1;
+}
 
 #list{
     width: 100%;
@@ -73,6 +76,9 @@ button{
     width: 70px;
     float: right;
 }
+.buttons button:hover {
+    opacity: 0.8;
+}
 .buttons button{
     float: right;
     border: none;
@@ -93,7 +99,7 @@ button{
 #done{
     text-decoration: line-through;
 }
-#done .button.complete{
+#done button.complete{
     background-color: green;
 }
 

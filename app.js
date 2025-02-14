@@ -8,32 +8,18 @@ document.getElementById("add").addEventListener("click", function() {
     
 });
 
-function removeItem(){
-    var item = this.parentNode;
-    var parent = item.parentNode;
-    parent.removeChild(item);
-}
-
-function completeItem(){
-    var item = this.parentNode;
-    var parent = item.parentNode;
-    var parentId = parent.id;
-    var target = (id === "list") ? document.getElementById("completed") : document.getElementById("list");
-    parent.removeChild(item);
-    target.insertBefore(item, target.childNodes[0]);
-}
-
-//Adds new item to todo list
 function addNewTask(item){
-    var list = document.getElementById("list");
-    var task = document.createElement("li");
-    task.innerText = item;
+    var list = document.getElementById("tasklist");
+
+    var newtask = document.createElement("li");
+    newtasktask.innerText = item;
+
     var buttons = document.createElement("div");
     buttons.classList.add("buttons");
 
     //creates remove and complete buttons + add classes
     var remove = document.createElement("button");
-    remove.classList.add("remove");
+    remove.classList.add("delete");
     remove.addEventListener("click", removeItem);
     
     var complete = document.createElement("button");
@@ -43,19 +29,37 @@ function addNewTask(item){
 
     buttons.appendChild(remove);
     buttons.appendChild(complete);
-    task.appendChild(buttons);
+    newtask.appendChild(buttons);
 
     //insert new todo before the first element
-    list.insertBefore(task, list.childNodes[0]);
+    list.insertBefore(newtask, list.childNodes[0]);
+}
 
-    //add event listener to pre-made list items
-    var deleteButtons = document.getElementsByClassName("remove");
-    for(var i = 0; i < deleteButtons.length; i++){
-        deleteButtons[i].addEventListener("click", removeItem);
-    }
+//Removes item from todo list
+function removeItem(){
+    var item = this.parentNode.parentNode;
+    var parent = item.parentNode;
+    parent.removeChild(item);
+}
 
-    var changeButtons = document.getElementsByClassName("complete");
-    for(var i = 0; i < changeButtons.length; i++){
-        changeButtons[i].addEventListener("click", completeItem);
-    }
+//Moves item to done list
+function completeItem(){
+    var item = this.parentNode.parentNode;
+    var parent = item.parentNode;
+    var parentId = parent.id;
+    var target = (parentId === "tasklist") ? document.getElementById("done") : document.getElementById("tasklist");
+    parent.removeChild(item);
+    target.insertBefore(item, target.childNodes[0]);
+}
+
+//add event listener to pre-made list items
+
+var deleteIt = document.getElementsByClassName("delete");
+for (var i = 0; i < deleteIt.length; i++){
+	deleteIt[i].addEventListener("click", removeItem);
+}
+
+var changeIt = document.getElementsByClassName("complete");
+for (var i = 0; i < changeIt.length; i++){
+	changeIt[i].addEventListener("click", completeItem);
 }
