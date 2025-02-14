@@ -5,40 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
     <link rel="stylesheet" href="main.css">
+    <script src="app.js" defer></script>
 </head>
 <body>
+    
     <div class="top">
         <h1>Daily Todo List</h1>
         <input type="text" name="task" id="task" placeholder="Enter your task here">
         <button id="add">+</button>
     </div>
+    
     <div id="list">
         <ul id="tasklist">
             <li class="task1">Task 1
-            
+            <div class="buttons">
                 <button class="delete"></button>
                 <button class="complete"></button>
+            </div>
             </li>
             <li>Task 2
-                <button class="delete"></button>
-                <button class="complete"></button>
+                <div class="buttons">
+                    <button class="delete"></button>
+                    <button class="complete"></button>
+                </div>
             </li>
             <li>Task 3
-                <button class="delete"></button>
-                <button class="complete"></button>
+                <div class="buttons">
+                    <button class="delete"></button>
+                    <button class="complete"></button>
+                </div>
             </li>
         </ul>
+       
         <ul id="done">
             <li>This is Done
-                <button class="delete"></button>
-                <button class="complete"></button>
+                <div class="buttons">
+                    <button class="delete"></button>
+                    <button class="complete"></button>
+                </div>
             </li>
             <li>This is Done 2
-                <button class="delete"></button>
-                <button class="complete"></button>
+                <div class="buttons">
+                    <button class="delete"></button>
+                    <button class="complete"></button>
+                </div>
             </li>
         </ul>
+
     </div>
+   
+   
     <div id="bottom"></div>
 </body>
 </html>
