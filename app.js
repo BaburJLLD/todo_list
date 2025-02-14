@@ -12,7 +12,7 @@ function addNewTask(item){
     var list = document.getElementById("tasklist");
 
     var newtask = document.createElement("li");
-    newtasktask.innerText = item;
+    newtask.innerText = item;
 
     var buttons = document.createElement("div");
     buttons.classList.add("buttons");
@@ -27,9 +27,9 @@ function addNewTask(item){
     complete.addEventListener("click", completeItem);
 
 
-    buttons.appendChild(remove);
-    buttons.appendChild(complete);
-    newtask.appendChild(buttons);
+    buttons.append(remove);
+    buttons.append(complete);
+    newtask.append(buttons);
 
     //insert new todo before the first element
     list.insertBefore(newtask, list.childNodes[0]);
